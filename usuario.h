@@ -22,28 +22,5 @@ class Usuario{
 		
 };
 
-class Docente:public Usuario{
-	private:
-		vector<string> cursos;
-		string claveSeguridad;
-		
-	public:
-		Docente();
-		void agregarCurso(string curso);
-		vector<string> getCursos();
-		void ingresarNotas(map<string, Estudiante>&estudiantes, string curso);
-		void editarNotas(map<string, Estudiante>& estudiantes, string curso, string claveSeguridad);
-};
-
-class Estudiante:public Usuario{
-	private:
-    	map<string, vector<double>> notasPorCurso;
-	
-	public:
-		Estudiante();
-		void agregarNota(string curso, vector<double> notas);
-		vector <double> getNotasPorCurso(string curso);
-		void mostrarNotas();
-};
 
 #endif
